@@ -40,6 +40,11 @@ case "$log" in
   * ) part="$default_semvar_bump";;
 esac
 
+# If DEFAULT_BUMP is NONE exit and skip versioning
+if [ "$part" == "NONE" ]; then
+  exit 0
+fi
+
 # check if new version is already specified
 if [ -z "$new_version" ]; then
   raw_output=$(bumpversion --list "$part" --dry-run)
