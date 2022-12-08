@@ -13,7 +13,7 @@ git fetch --tags
 tag=$(git for-each-ref --sort=-v:refname --count=1 --format '%(refname)' refs/tags/[0-9]*.[0-9]*.[0-9]* refs/tags/v[0-9]*.[0-9]*.[0-9]* | cut -d / -f 3-)
 
 # get commit logs and determine home to bump the version
-# supports #major, #minor, #patch (anything else will be 'minor')
+# supports #major, #minor, #patch (anything else will be 'NONE')
 
 # If we don't have any tags yet, check all of our commit history, otherwise check since the last tag
 if [ -z "$tag" ]
