@@ -16,6 +16,8 @@ jobs:
       - name: Bump version
         id: bump
         uses: ./
+        env:
+          DEFAULT_BUMP: NONE
       - name: Push changes
         uses: ad-m/github-push-action@master
         with:

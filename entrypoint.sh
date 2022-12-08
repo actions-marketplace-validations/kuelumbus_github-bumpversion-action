@@ -42,6 +42,7 @@ esac
 
 # If DEFAULT_BUMP is NONE exit and skip versioning
 if [ "$part" == "NONE" ]; then
+  echo "DEFAULT_BUMP set to NONE. Skipping..."
   exit 0
 fi
 
