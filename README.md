@@ -3,7 +3,7 @@
 A GitHub Action to use the [bumpversion](https://pypi.org/project/bumpversion/) application to bump and tag branches
 
 ![Lint Status](https://github.com/kuelumbus/github-bumpversion-action/workflows/Lint%20Code%20Base/badge.svg)
-[![GitHub release (latest by date)](https://img.shields.io/github/v/release/kuelumbus/github-bumpversion-action?label=Github%20Release)](https://github.com/jaumann/github-bumpversion-action/releases)
+[![GitHub release (latest by date)](https://img.shields.io/github/v/release/kuelumbus/github-bumpversion-action?label=Github%20Release)](https://github.com/kuelumbus/github-bumpversion-action/releases)
 [![License](https://img.shields.io/github/license/kuelumbus/github-bumpversion-action)](LICENSE)
 
 ## Usage
