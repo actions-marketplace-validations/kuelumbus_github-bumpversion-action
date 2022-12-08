@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Configuration
-default_semvar_bump=${DEFAULT_BUMP:-patch}
+default_semvar_bump=${DEFAULT_BUMP:-NONE}
 source=${SOURCE:-.}
 dryrun=${DRY_RUN:-false}
 new_version=${NEW_VERSION:-""}

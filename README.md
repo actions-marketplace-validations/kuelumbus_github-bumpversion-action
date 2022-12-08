@@ -35,7 +35,7 @@ jobs:
 **Environment Variables**
 
 * **GITHUB_TOKEN** ***(required)*** - Required for permission to tag the repository.
-* **DEFAULT_BUMP** *(optional)* - Which type of bump to use when none explicitly provided (default: `minor`).
+* **DEFAULT_BUMP** *(optional)* - Which type of bump to use when none explicitly provided (default: `NONE`).
 * **SOURCE** *(optional)* - Operate on a relative path under $GITHUB_WORKSPACE.
 * **DRY_RUN** *(optional)* - Determine the next version without tagging the branch. The workflow can use the outputs `new_tag` and `tag` in subsequent steps. Possible values are ```true``` and ```false``` (default).
 * **NEW_VERSION** *(optional)* - New version that should be in the files.
@@ -53,7 +53,8 @@ jobs:
 
 **Manual Bumping:** Any commit message that includes `#major`, `#minor`, or `#patch` will trigger the respective version bump. If two or more are present, the highest-ranking one will take precedence.
 
-**Automatic Bumping:** If no `#major`, `#minor` or `#patch` tag is contained in the commit messages, it will bump whichever `DEFAULT_BUMP` is set to (which is `patch` by default).
+**Automatic Bumping:** If no `#major`, `#minor` or `#patch` tag is contained in the commit messages, it will bump whichever `DEFAULT_BUMP` is set to (which is `NONE` by default). NONE does not trigger
+any bump.
 
 > ***Note:*** This action **will not** bump the tag if the `HEAD` commit has already been tagged.
 
